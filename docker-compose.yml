@@ -1,0 +1,11 @@
+services:
+  makhana-web:
+    container_name: makhana-web
+    build: .
+    restart: always
+    networks:
+      - nginx-network
+
+networks:
+  nginx-network:
+    external: true
