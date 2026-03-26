@@ -36,6 +36,7 @@ export default function Footer() {
                 <a 
                   key={social.icon} 
                   href={social.href}
+                  aria-label={`Follow us on ${social.icon}`}
                   className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white text-white hover:text-black transition-all"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -47,7 +48,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-8 text-white uppercase tracking-widest text-xs">Shop</h4>
+            <h3 className="font-bold mb-8 text-white uppercase tracking-widest text-xs">Shop</h3>
             <ul className="space-y-4">
               <li><Link href="#" className="text-sm text-white/40 hover:text-white transition-colors">Classic Himalayan Salt</Link></li>
               <li><Link href="#" className="text-sm text-white/40 hover:text-white transition-colors">Peri Peri Roast</Link></li>
@@ -57,7 +58,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-8 text-white uppercase tracking-widest text-xs">Support</h4>
+            <h3 className="font-bold mb-8 text-white uppercase tracking-widest text-xs">Support</h3>
             <ul className="space-y-4">
               <li><Link href="#" className="text-sm text-white/40 hover:text-white transition-colors">Shipping Policy</Link></li>
               <li><Link href="#" className="text-sm text-white/40 hover:text-white transition-colors">Refund Policy</Link></li>
@@ -67,7 +68,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-8 text-white uppercase tracking-widest text-xs">Contact</h4>
+            <h3 className="font-bold mb-8 text-white uppercase tracking-widest text-xs">Contact</h3>
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-sm text-white/40">
                 <svg className="w-4 h-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">

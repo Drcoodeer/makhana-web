@@ -47,9 +47,10 @@ export default function Testimonials() {
             <div className="flex gap-4">
               <button 
                 onClick={handlePrev}
+                aria-label="Previous testimonial"
                 className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all outline-none"
               >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M15 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
                 </svg>
               </button>
@@ -58,15 +59,19 @@ export default function Testimonials() {
                   <button 
                     key={i}
                     onClick={() => setActiveIndex(i)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${activeIndex === i ? "bg-brand-accent w-6" : "bg-white/20"}`}
-                  ></button>
+                    aria-label={`Go to testimonial ${i + 1}`}
+                    className="p-2 transition-all group outline-none"
+                  >
+                    <div className={`h-2 rounded-full transition-all duration-300 ${activeIndex === i ? "bg-brand-accent w-6" : "bg-white/20 w-2 group-hover:bg-white/40"}`}></div>
+                  </button>
                 ))}
               </div>
               <button 
                 onClick={handleNext}
+                aria-label="Next testimonial"
                 className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all text-brand-accent outline-none"
               >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
                 </svg>
               </button>

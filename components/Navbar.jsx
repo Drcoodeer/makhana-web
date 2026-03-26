@@ -47,7 +47,10 @@ export default function Navbar() {
         <div className="flex flex-col items-end leading-tight mr-1">
           <span className="text-[12px] font-medium text-white">Gretchen Rosser</span>
         </div>
-        <div className="relative w-8 h-8 rounded-full overflow-hidden border border-white/20 bg-brand-secondary/30 flex items-center justify-center">
+        <div 
+          aria-label="User profile"
+          className="relative w-8 h-8 rounded-full overflow-hidden border border-white/20 bg-brand-secondary/30 flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors"
+        >
           <svg className="w-5 h-5 text-white/70" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
           </svg>

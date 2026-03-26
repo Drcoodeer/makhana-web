@@ -44,6 +44,8 @@ export default function FAQ() {
             >
               <button 
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                aria-expanded={openIndex === index}
+                aria-label={faq.question}
                 className="w-full p-8 flex items-center justify-between text-left hover:bg-white/[0.02] transition-all"
               >
                 <span className="text-xl font-bold group-hover:text-brand-accent transition-colors">{faq.question}</span>
@@ -53,6 +55,7 @@ export default function FAQ() {
                     </svg>
                 </div>
               </button>
+
               
               <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-96' : 'max-h-0'}`}>
                 <div className="p-8 pt-0 text-white/50 leading-relaxed border-t border-white/5 mx-8">
